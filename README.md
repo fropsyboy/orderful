@@ -5,6 +5,10 @@ This is a RESTful API for converting between various document formats, including
 - JSON to String
 - JSON to XML
 - XML to JSON
+- ISA segment defines the start of an interchange.
+- GS segment starts a functional group.
+- ST segment starts a transaction set.
+- PO1 segments contain line items with quantities, unit price, and product identifiers.
 
 The API also includes error handling for invalid formats.
 
@@ -88,7 +92,7 @@ NODE_ENV=development
 
 ## API Endpoints
 
-    The postman documentation can be found - https://documenter.getpostman.com/view/3726387/2sAXqwZfVc with response examples
+    The postman documentation can be found - https://documenter.getpostman.com/view/3726387/2sAXqwZfVc with response examples. You can also reference the ./Orderful.postmant_collection.json in the file path. 
 
 
 

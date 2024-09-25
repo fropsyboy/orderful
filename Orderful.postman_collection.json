@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "d6bce961-ebc6-475c-86a1-31d05d02c05f",
+		"name": "Orderful",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3726387"
+	},
+	"item": [
+		{
+			"name": "string to json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"input\": \"ProductID*4*8*15*16*23~AddressID*42*108*3*14~ContactID*59*26~\",\n  \"fromFormat\": \"string\",\n  \"toFormat\": \"json\",\n  \"elementSeparator\": \"*\",\n  \"segmentSeparator\": \"~\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/converter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"converter"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "string to json e.g",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"input\": \"ProductID*4*8*15*16*23~AddressID*42*108*3*14~ContactID*59*26~\",\n  \"fromFormat\": \"string\",\n  \"toFormat\": \"json\",\n  \"elementSeparator\": \"*\",\n  \"segmentSeparator\": \"~\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/converter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"converter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6b-GPb710YnHc5sJUPk0DZqNYST1Jo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:52:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"ProductID\": [\n            \"4\",\n            \"8\",\n            \"15\",\n            \"16\",\n            \"23\"\n        ],\n        \"AddressID\": [\n            \"42\",\n            \"108\",\n            \"3\",\n            \"14\"\n        ],\n        \"ContactID\": [\n            \"59\",\n            \"26\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Key EDI string to json",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"input\": \"ISA*00*          *00*          *12*5032337522     *01*048337914      *190225*1532*^*00501*000001367*0*P*>~GS*PO*SENDER*RECEIVER*20190325*1532*572*X*005010~ST*850*000000579~BEG*00*SA*0097129080**20190325~REF*DP*0041~REF*IA*34354104~PER*BD*LD*TE*(503) 232-8844~FOB*CC~CSH*Y~ITD**2*****60*****NET 60 DAYS~DTM*001*20190404~DTM*002*20190411~DTM*010*20190325~N9*ZZ*COMMENTS~MTX**REP:BOB:573-888-8888~MTX**FAX #:573-888-8888~MTX**PROVIDE A GENERAL COMPLIANCY CERTIFICATE FOR~MTX**APPLICABLE PRODUCTS MANUFACTURED AFTER~MTX**NOVEMBER 12, 2008 INDICATING THAT THE PRODUCTS~MTX**HAVE MET ALL APPLICABLE PRODUCT SAFETY STANDARDS~MTX**AS PER U.S. CONSUMER PRODUCTS SAFETY IMPROVEMENT~MTX**ACT OF 2008. CERTIFICATES THAT ARE NOT ALREADY~MTX**ACCESSIBLE IN ELECTRONIC FORMAT ACCORDING TO~MTX**CPSC GUIDELINES SHOULD BE~MTX**EMAILED TO notarealemail@orderful.com~N1*BT*DEPT STORE, INC.*9*0079088090000~N3*P O BOX 305248~N4*NASHVILLE*TN*372305103~N1*ST*DEPT STORE*9*0079088094461~N2*CHEHALIS RSC DC - HOME/HCC~N3*224 MAURIN RD.~N4*CHEHALIS*WA*985328716~N1*BY*DEPT STORE, INC.*9*0079088090000~PO1*1*21*EA*16.5**UP*014306929699*PI*04598244*VN*US840116*VE*RUST*C3*0942/0965~PID*F*08***19\",\n  \"fromFormat\": \"string\",\n  \"toFormat\": \"json\",\n  \"elementSeparator\": \"*\",\n  \"segmentSeparator\": \"~\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/converter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"converter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "826"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33a-LbuohZ4ja8tE+e/A84Sea/lWooM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 18:49:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"ISA\": [\n            \"00\",\n            \"          \",\n            \"00\",\n            \"          \",\n            \"12\",\n            \"5032337522     \",\n            \"01\",\n            \"048337914      \",\n            \"190225\",\n            \"1532\",\n            \"^\",\n            \"00501\",\n            \"000001367\",\n            \"0\",\n            \"P\",\n            \">\"\n        ],\n        \"GS\": [\n            \"PO\",\n            \"SENDER\",\n            \"RECEIVER\",\n            \"20190325\",\n            \"1532\",\n            \"572\",\n            \"X\",\n            \"005010\"\n        ],\n        \"ST\": [\n            \"850\",\n            \"000000579\"\n        ],\n        \"BEG\": [\n            \"00\",\n            \"SA\",\n            \"0097129080\",\n            \"\",\n            \"20190325\"\n        ],\n        \"REF\": [\n            \"IA\",\n            \"34354104\"\n        ],\n        \"PER\": [\n            \"BD\",\n            \"LD\",\n            \"TE\",\n            \"(503) 232-8844\"\n        ],\n        \"FOB\": [\n            \"CC\"\n        ],\n        \"CSH\": [\n            \"Y\"\n        ],\n        \"ITD\": [\n            \"\",\n            \"2\",\n            \"\",\n            \"\",\n            \"\",\n            \"\",\n            \"60\",\n            \"\",\n            \"\",\n            \"\",\n            \"\",\n            \"NET 60 DAYS\"\n        ],\n        \"DTM\": [\n            \"010\",\n            \"20190325\"\n        ],\n        \"N9\": [\n            \"ZZ\",\n            \"COMMENTS\"\n        ],\n        \"MTX\": [\n            \"\",\n            \"EMAILED TO notarealemail@orderful.com\"\n        ],\n        \"N1\": [\n            \"BY\",\n            \"DEPT STORE, INC.\",\n            \"9\",\n            \"0079088090000\"\n        ],\n        \"N3\": [\n            \"224 MAURIN RD.\"\n        ],\n        \"N4\": [\n            \"CHEHALIS\",\n            \"WA\",\n            \"985328716\"\n        ],\n        \"N2\": [\n            \"CHEHALIS RSC DC - HOME/HCC\"\n        ],\n        \"PO1\": [\n            \"1\",\n            \"21\",\n            \"EA\",\n            \"16.5\",\n            \"\",\n            \"UP\",\n            \"014306929699\",\n            \"PI\",\n            \"04598244\",\n            \"VN\",\n            \"US840116\",\n            \"VE\",\n            \"RUST\",\n            \"C3\",\n            \"0942/0965\"\n        ],\n        \"PID\": [\n            \"F\",\n            \"08\",\n            \"\",\n            \"\",\n            \"19\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "json to string",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"input\": \"{\\\"ProductID\\\":[\\\"4\\\",\\\"8\\\",\\\"15\\\",\\\"16\\\",\\\"23\\\"], \\\"AddressID\\\":[\\\"42\\\",\\\"108\\\",\\\"3\\\",\\\"14\\\"], \\\"ContactID\\\":[\\\"59\\\",\\\"26\\\"]}\",\n  \"fromFormat\": \"json\",\n  \"toFormat\": \"string\",\n  \"elementSeparator\": \"*\",\n  \"segmentSeparator\": \"~\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/converter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"converter"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "json to string example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"input\": \"{\\\"ProductID\\\":[\\\"4\\\",\\\"8\\\",\\\"15\\\",\\\"16\\\",\\\"23\\\"], \\\"AddressID\\\":[\\\"42\\\",\\\"108\\\",\\\"3\\\",\\\"14\\\"], \\\"ContactID\\\":[\\\"59\\\",\\\"26\\\"]}\",\n  \"fromFormat\": \"json\",\n  \"toFormat\": \"string\",\n  \"elementSeparator\": \"*\",\n  \"segmentSeparator\": \"~\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/converter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"converter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-HrAK+MGi4+2I94lPdrfI8jnKwqY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:38:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"ProductID*4*8*15*16*23~AddressID*42*108*3*14~ContactID*59*26\"\n}"
+				}
+			]
+		},
+		{
+			"name": "json to xml",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"input\": \"{\\\"ProductID\\\":[\\\"4\\\",\\\"8\\\",\\\"15\\\",\\\"16\\\",\\\"23\\\"], \\\"AddressID\\\":[\\\"42\\\",\\\"108\\\",\\\"3\\\",\\\"14\\\"], \\\"ContactID\\\":[\\\"59\\\",\\\"26\\\"]}\",\n  \"fromFormat\": \"json\",\n  \"toFormat\": \"string\",\n  \"elementSeparator\": \"*\",\n  \"segmentSeparator\": \"~\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/converter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"converter"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "json to xml",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"input\": \"{\\\"ProductID\\\":[\\\"4\\\",\\\"8\\\",\\\"15\\\",\\\"16\\\",\\\"23\\\"], \\\"AddressID\\\":[\\\"42\\\",\\\"108\\\",\\\"3\\\",\\\"14\\\"], \\\"ContactID\\\":[\\\"59\\\",\\\"26\\\"]}\",\n  \"fromFormat\": \"json\",\n  \"toFormat\": \"xml\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/converter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"converter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "364"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16c-N5o1K9pG7GdTSuq8Nvv46eEeGTw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:54:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\"?>\n<root>\n    <ProductID>4</ProductID>\n    <ProductID>8</ProductID>\n    <ProductID>15</ProductID>\n    <ProductID>16</ProductID>\n    <ProductID>23</ProductID>\n    <AddressID>42</AddressID>\n    <AddressID>108</AddressID>\n    <AddressID>3</AddressID>\n    <AddressID>14</AddressID>\n    <ContactID>59</ContactID>\n    <ContactID>26</ContactID>\n</root>"
+				}
+			]
+		},
+		{
+			"name": "xml to json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"input\": \"{\\\"ProductID\\\":[\\\"4\\\",\\\"8\\\",\\\"15\\\",\\\"16\\\",\\\"23\\\"], \\\"AddressID\\\":[\\\"42\\\",\\\"108\\\",\\\"3\\\",\\\"14\\\"], \\\"ContactID\\\":[\\\"59\\\",\\\"26\\\"]}\",\n  \"fromFormat\": \"json\",\n  \"toFormat\": \"string\",\n  \"elementSeparator\": \"*\",\n  \"segmentSeparator\": \"~\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/converter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"converter"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "xml to json",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"input\": \"<root><ProductID><ProductID1>4</ProductID1><ProductID2>8</ProductID2><ProductID3>15</ProductID3><ProductID4>16</ProductID4><ProductID5>23</ProductID5></ProductID><AddressID><AddressID1>42</AddressID1><AddressID2>108</AddressID2><AddressID3>3</AddressID3><AddressID4>14</AddressID4></AddressID><ContactID><ContactID1>59</ContactID1><ContactID2>26</ContactID2></ContactID></root>\",\n  \"fromFormat\": \"xml\",\n  \"toFormat\": \"json\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/converter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"converter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "287"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11f-5EPFvQmu72LpmBPbf4lWxmkVf7Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:56:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"root\": {\n            \"ProductID\": [\n                {\n                    \"ProductID1\": [\n                        \"4\"\n                    ],\n                    \"ProductID2\": [\n                        \"8\"\n                    ],\n                    \"ProductID3\": [\n                        \"15\"\n                    ],\n                    \"ProductID4\": [\n                        \"16\"\n                    ],\n                    \"ProductID5\": [\n                        \"23\"\n                    ]\n                }\n            ],\n            \"AddressID\": [\n                {\n                    \"AddressID1\": [\n                        \"42\"\n                    ],\n                    \"AddressID2\": [\n                        \"108\"\n                    ],\n                    \"AddressID3\": [\n                        \"3\"\n                    ],\n                    \"AddressID4\": [\n                        \"14\"\n                    ]\n                }\n            ],\n            \"ContactID\": [\n                {\n                    \"ContactID1\": [\n                        \"59\"\n                    ],\n                    \"ContactID2\": [\n                        \"26\"\n                    ]\n                }\n            ]\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "invalid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"input\": \"{\\\"ProductID\\\":[\\\"4\\\",\\\"8\\\",\\\"15\\\",\\\"16\\\",\\\"23\\\"], \\\"AddressID\\\":[\\\"42\\\",\\\"108\\\",\\\"3\\\",\\\"14\\\"], \\\"ContactID\\\":[\\\"59\\\",\\\"26\\\"]}\",\n  \"fromFormat\": \"json\",\n  \"toFormat\": \"string\",\n  \"elementSeparator\": \"*\",\n  \"segmentSeparator\": \"~\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/converter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"converter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
