@@ -17,14 +17,13 @@ The API also includes error handling for invalid formats.
 
 ## Table of Contents
 
-- [Installation](#installation)
+- [Installation](#direct-installation)
+- [Dockeriesed Installation](#docker-installation)
 - [Environment Variables](#environment-variables)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
-- [Running Tests](#running-tests)
-- [Tech Stack](#tech-stack)
 
-## Installation
+## Direct Installation
 
 1. Clone this repository:
 
@@ -44,6 +43,23 @@ The API also includes error handling for invalid formats.
     npm install
     ```
 
+## Docker Installation
+
+1. Docker build:
+    ```bash
+    docker-compose build
+    ```
+2. Docker up:
+    ```bash
+    docker-compose up
+    ```
+3. Docker down:
+    ```bash
+    docker-compose down
+    ```
+
+
+
 ## Environment Variables
 
 Create a `.env` file in the root of the project and set up the following environment variables:
@@ -51,3 +67,28 @@ Create a `.env` file in the root of the project and set up the following environ
 ```plaintext
 PORT=3000
 NODE_ENV=development
+```
+
+## Running the Application
+
+1. Tests:
+    ```bash
+    npm test
+    ```
+
+2. Development:
+    ```bash
+    npm run dev
+    ```
+
+3. Production:
+    ```bash
+    npm start
+    ```
+
+## API Endpoints
+
+    The postman documentation can be found - https://documenter.getpostman.com/view/3726387/2sAXqwZfVc with response examples
+
+
+
